@@ -1,0 +1,299 @@
+.navbar {
+    background-color: white;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    padding-top: 10px;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: fixed;
+    top: 0;
+    z-index: 20;
+
+  }
+  .navbarTop{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  
+  
+
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+  }
+  
+  .nav-logo {
+
+  
+    text-transform: uppercase;
+    background-image: linear-gradient(-225deg,
+        #231557 0%,
+        #44107a 29%,
+        #ff1361 67%,
+        #fff800 100%);
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-color: #f5b921;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textclip 2s linear infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    font-weight: bolder;
+    z-index: 10;
+  }
+  
+
+  
+  .nav-logo .icon {
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;
+    margin-left: 16px;
+  }
+  
+  .nav-menu {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+  
+    text-align: center;
+
+  }
+  
+  .nav-links {
+    color: grey;
+    text-decoration: none;
+   
+    height: auto;
+
+    font-size: 10px;
+    font-weight: bold;
+    border-bottom: 3px solid transparent;
+  }
+  
+
+  
+  .nav-item {
+    line-height: 20px;
+
+    color: gray;
+    font-size: 10px;
+    font-weight: bold;
+ 
+    display: flex;
+  
+    align-items: center;
+    justify-content: center;
+
+  }
+  .prebytes{
+    width: 14vw;
+    height: 7vh;
+  }
+  .prepbytesNav{
+    display: flex;
+   
+
+  }
+  
+  .nav-item:after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 0;
+
+  
+  }
+  
+
+   
+  .nav-icon {
+    display: none;
+    color: #f5b921;
+  }
+  
+  .nav-icon .icon {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+  }
+  
+  @media screen and (max-width: 760px) {
+    .nav-menu {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      border-top: 1px solid #fff;
+      position: absolute;
+      top: 80px;
+      left: -110%;
+      opacity: 1;
+      transition: all 0.5s ease;
+    }
+    .prebytes{
+      display: flex;
+      position: absolute;
+      left: 10px;
+      top: 5px;
+      width: 30vw;
+      height: 7vh;
+      /* left: 0px; */
+    }
+ 
+    .navbarTop{
+      display: flex;
+      flex-direction: column;
+      /* padding: 0px; */
+      gap: 10px;
+  
+  
+      /* justify-content: space-between; */
+    }
+  
+    .nav-menu.active {
+      background: #1f5156;
+      left: 0px;
+      top: 55px;
+      /* color: white; */
+      opacity: 1;
+      /* transition: all 0.5s ease; */
+      z-index: 1;
+    }
+  
+    .nav-item .active {
+      color: #ffdd40;
+      border: none;
+    }
+  
+    .nav-links {
+      /* padding: 1.5rem; */
+      width: 100%;
+      /* display: table; */
+    }
+  
+   .nav-logo {
+    font-size: 30px;
+    margin-top: 40x;
+    }
+  
+    .nav-icon {
+      display: block;
+      position: absolute;
+      top: 30%;
+      right: 50px;
+  
+      width: 5px;
+      height: 2px;
+      cursor: pointer;
+ 
+    }
+    .navbar {
+      background-color: white;
+      width: 100%;
+      height: 40px;
+      display: flex;
+      flex-direction: column;
+      padding-top: 10px;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1.2rem;
+      position: fixed;
+      top: 0;
+      z-index: 20;
+    
+    }
+    .buttonlogo{
+      font-size: 10px;
+    }
+  }
+  
+  @media screen and (min-width:760px) and (max-width:912px){
+    .nav-logo {
+      font-size: 10px;
+      margin-top: 40x;
+      }
+      .navbarTop{
+        display: flex;
+        /* flex-direction: column; */
+        align-items: center;
+        padding: 10px;
+        /* justify-content: space-between; */
+      }
+      .prebytes{
+      
+        width: 25vw;
+        height: 5vh;
+        /* left: 0px; */
+      }
+  }
+  
+  
+  
+  
+  
+  
+  /* /////////////////////////////// */
+  /* text-xl font-medium text-gray-700 */
+  /* Dropdown Button */
+  .dropbtn {
+    /* background-color: #04AA6D; */
+    font-size: 20px;
+    font-weight: lighter;
+    /* color: gray; */
+    color: white;
+    /* padding: 16px; */
+    font-size: 26px;
+    border: none;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  /* .dropdown:hover .dropbtn {background-color: #3e8e41;} */

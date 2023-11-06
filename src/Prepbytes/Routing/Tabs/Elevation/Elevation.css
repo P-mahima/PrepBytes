@@ -1,0 +1,113 @@
+
+.Elevation_Main_Div{
+    padding-left: 50px;
+    padding-right: 50px;    
+}
+.Elevation_First_Div{
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9dfdf;
+}
+.Elevation_First_Div_Image{
+    height: 80vh;
+}
+.Elevation_First_para{
+    text-align: left;
+}
+.Elevation_Div_First_para{
+    font-size: 13px;
+    font-weight: lighter;
+    color: rgb(49, 46, 46)
+}
+.Elevation_Div_First_heading{
+    font-size: 25px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(49, 46, 46);
+}
+.Elevation_First_Div_Second_Image{
+    width: 87.2vw;
+}
+.Elevation_First_Div_Button{
+    background: #00a5ec 0 0 no-repeat padding-box;
+    border: none;
+    /* padding: 15px 52px 14px 51px; */
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 12px;
+    padding: 7px;
+    margin-left: 10px;
+}
+.Live_Learning{
+    width: 20vw;
+    text-align: left;
+    border: 2px solid grey;
+    border-radius: 5px;
+    padding: 10px;
+}
+.Live_Learning_image{
+    background: #fdf0d7 0 0 no-repeat padding-box;
+    padding: 5px;
+    border-radius: 3px;
+}
+.LiveLearningpara{
+    font-size: 15px;
+    color: rgb(49, 46, 46);
+}
+.Live_Learning_Paragraph{
+    font-size: 13px;
+    color: grey;
+}
+.Elevation_second_div{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+@media all and (min-width: 320px) and (max-width: 760px){
+    .Elevation_First_Div_Second_Image{
+        display: none;
+    }
+    .Elevation_First_Div {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .Elevation_First_Div_Image{
+        height: 30vh;
+    }
+    .Elevation_second_div{
+        display: flex;
+        flex-direction: column;
+    }
+    .Live_Learning{
+        width: 70vw;
+    }
+    .Elevation_Main_Div{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+
+
+
+@media all and (min-width: 761px) and (max-width: 960px){
+  
+    .Elevation_First_Div_Image{
+        height: 50vh;
+    }
+    .Elevation_First_Div{
+        display: flex;
+        flex-direction: column;
+    }
+    .Elevation_First_Div_Second_Image{
+        display: none;
+    }
+}

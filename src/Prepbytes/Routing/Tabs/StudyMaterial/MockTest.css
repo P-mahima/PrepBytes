@@ -1,0 +1,241 @@
+.MockHead {
+    background: transparent linear-gradient(180deg, #3969ad, #1d3557) 0 0 no-repeat padding-box;
+    min-height: 200px;
+}
+
+.MockHeadData {
+    display: flex;
+    /* flex-direction: column; */
+    margin: 0 auto;
+    max-width: 1280px;
+    color: #fff;
+}
+
+.MockCenter {
+    width: 100%;
+    padding-left: 30px;
+}
+
+.MockHeadingPart {
+    font: 32px Poppins;
+    font-weight: 600;
+    padding-top: 22px;
+    /* padding-bottom: 26px; */
+    color: #fff;
+    text-align: left;
+}
+
+.MockPara {
+    width: 50%;
+    font-size: 16px;
+    letter-spacing: .14px;
+    line-height: 1.4;
+    padding-bottom: 29px;
+    text-align: justify;
+}
+
+.FeaturedList {
+    max-width: 1280px;
+    margin: 0 auto;
+    /* padding-top: 50px; */
+}
+
+.FeaturedHeading {
+    color: #22559c;
+    font-size: 28px;
+    text-align: left;
+}
+
+.FeaturePastPara {
+    text-align: center;
+    color: #ffa000;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 18px;
+    position: relative;
+    margin: 15px 0 40px;
+}
+
+.FeaturePastPara::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    height: 3px;
+    width: 40%;
+    margin-top: 11px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: #5f8dc4;
+}
+
+.FeaturePastPara::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    left: 60%;
+    top: 0;
+    height: 3px;
+    width: 40%;
+    margin-top: 11px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: #5f8dc4;
+    margin-left: auto;
+}
+
+.FeaturedPastContainer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+    /* height: 20vh; */
+}
+
+.MockCard {
+    width: 10em;
+    /* height: auto; */
+    padding: 10px;
+    background: transparent linear-gradient(180deg, #e0ebf9, #fff 54%, #fff) 0 0 no-repeat padding-box;
+    /* -webkit-box-shadow: 0 10px 30px rgba(95,141,196,.2); */
+    box-shadow: 0 10px 30px rgba(95, 141, 196, .2);
+    border-radius: 5px;
+    color: #707070;
+    margin: 0 auto 30px;
+}
+
+.MockCard-top {
+    display: flex;
+    /* margin-bottom: 10px; */
+    justify-content: space-between;
+}
+
+.MockCard-top img {
+    height: 15px;
+    /* width: 5vw; */
+    margin: 8px;
+    cursor: pointer;
+}
+
+.MockCard-share {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.MockCard-share img {
+    display: block;
+}
+
+.CardIm {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.CardIm img {
+    height: 40px;
+    width: 40%;
+}
+
+.FutureCard-Heading1 {
+    text-align: center;
+    color: #3969ad;
+    font-weight: 500;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    font-size: 13px;
+}
+
+.FuturedCard-MiddlePart {
+    display: flex;
+    /* -webkit-box-align: center; */
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.MiddlePart-left {
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.leftPart-top {
+    margin-top: 20px;
+    color: #707070;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.leftPart-bottom {
+    font-size: 11px;
+    color: #707070;
+}
+
+.MiddlePart-Center {
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.midPart-top {
+    margin-top: 20px;
+    color: #707070;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.midPart-bottom {
+    font-size: 11px;
+    color: #707070;
+}
+
+.RightPart-right {
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.MockTestCard__bottom {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+    margin-top: 20px;
+}
+
+.bottom--button {
+    background: #22559c;
+    -webkit-box-shadow: 0 3px 6px rgba(95, 141, 196, .2);
+    box-shadow: 0 3px 6px rgba(95, 141, 196, .2);
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 13px;
+    color: #fff;
+    /* margin: 10px 0; */
+    text-decoration: none;
+    border: none;
+}
+
+.amHR {
+    height: 35px;
+    width: 2px;
+    background-color: #707070;
+    position: relative;
+    top: 10px;
+}
+
+
+@media all and (min-width: 320px) and (max-width: 760px){
+    .FeaturePastPara::after{
+        width: 25%;
+    }
+    .FeaturePastPara::before{
+        width: 25%;
+    }
+}

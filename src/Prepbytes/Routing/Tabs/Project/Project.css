@@ -1,0 +1,48 @@
+.mainDIVProject{
+    width: 70vw;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* gap: 20px; */
+    justify-content: space-between;
+    
+}
+
+
+.ProjectCard{
+    width: 25vw;
+    /* height: 36vh; */
+    border: 2px solid grey;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* flex-wrap: wrap; */
+
+    align-items: center;
+    background: linear-gradient( rgb(141, 199, 197), white);
+    border-radius: 10px;
+
+}
+
+.RepoHost a{
+    color: white;
+    background-color: rgb(0, 153, 255);
+    text-decoration: none;
+    /* border: 2px solid rgb(230, 15, 87,106); */
+    /* width: 190px; */
+    padding: 10px;
+    text-align: center;
+    /* width: 10vw; */
+    /* margin-bottom: 20px; */
+    
+}
+.ProjectHeading{
+    color: blue;
+}
+.FlexProjectButton{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}

@@ -1,0 +1,57 @@
+.CartPage{
+    display: flex;
+    /* width: 98vw; */
+}
+.CartLeft{
+    width: 16vw;
+    height: 100vh;
+    /* border-right: 2px solid skyblue; */
+    box-shadow: 1px 1px 5px 3px gray;
+}
+
+.Program{
+    display: flex;
+    border-bottom: 1px solid gray;
+    padding: 2%;
+}
+.Program h2{
+    /* padding: 2px 3%; */
+    font-size: 1.3rem;
+    color: gray;
+}
+
+.proIcon{
+    height: 30px;
+}
+.CartBox{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 6% 0px;
+}
+.CartBox h3{
+    color: #00a6eb;
+    text-align: left;
+}
+
+.CartItem{
+    display: flex;
+    width: 70vw;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0px auto;
+    padding: 5px  0px;
+}
+
+@media screen and (min-width:300px) and (max-width:760px) {
+    .CartBox{
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+    .CartLeft{
+        width:22vw;
+    }
+    .CartItem{
+        margin-left: 10px;
+    }
+}

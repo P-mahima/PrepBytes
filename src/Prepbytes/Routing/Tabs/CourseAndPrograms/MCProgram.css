@@ -1,0 +1,251 @@
+.MCProgramHeading{
+    color: rgb(46, 145, 235);
+}
+.SapnDiv{
+    font-weight: bold;
+}
+.MCProgramMainDivFirst{
+    display: flex;
+    /* width: 80vw; */
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    padding: 60px;
+}
+.MCProgramHeadingImage{
+    height: 40vh;
+}
+.MCProgramHeadingpara{
+    text-align: justify;
+    width: 350px;
+}
+.MCProgramHeadingButton{
+    background: #00a6eb 0 0 no-repeat padding-box;
+    box-shadow: 0 0 6px rgba(0,0,0,.1607843137254902);
+    border: none;
+    cursor: pointer;
+    color: white;
+    padding: 10px;
+    height: 30px;
+    width: 100px;
+    border-radius: 5px;
+}
+.MCSUBdivImage{
+    height: 40px;
+}
+.MCSUBdiv_SUB_Div_First{
+    display: flex;
+    border-bottom: 4px solid #c805a5;
+    border-right: 4px solid rgb(194, 4, 143);
+    border-radius: 5px;
+    flex-wrap: wrap;
+}
+.MCSUBdiv_SUB_Div_Second{
+    display: flex;
+    border-bottom: 4px solid #0398d3;
+    border-right: 4px solid #0398d3;
+    border-radius: 5px;
+}
+.MCSUBdiv_SUB_Div_Third{
+    display: flex;
+    border-bottom: 4px solid #0322d3;
+    border-right: 4px solid #0322d3;
+    border-radius: 5px;
+}
+.MCSUBdiv_SUB_Div_Four{
+    display: flex;
+    border-bottom: 4px solid #ebcd0b;
+    border-right: 4px solid #ebcd0b;
+    border-radius: 5px;
+}
+.MCSUBdiv_SUB_Div_Main{
+    width: 32vw;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  
+    
+}
+.MCSUBdiv_SUB_{
+    display: flex;
+    /* padding-left: 150px;
+    padding-right: 150px; */
+    gap: 25px;
+}
+.FounderDiv{
+    display: flex;
+    /* flex-direction: column; */
+}
+.FounderDivImageCompany{
+    height: 5vh;
+}
+.FounderDivImageFounder{
+    height: 15vh;
+}
+.Founderdetail{
+    display: flex;
+    flex-direction: column;
+    /* height: 30px; */
+    gap: 0px;
+}
+.Founder{
+    display: flex;
+    /* padding-left: 150px;
+    padding-right: 120px; */
+    gap: 60px;
+}
+.Founderinfo{
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+}
+.MasterCompetitiveProgramming{
+    display: flex;
+    /* padding-left: 160px; */
+    gap: 30px;
+    /* padding-right: 120px; */
+}
+.MasterCompetitiveProgramming_Left{
+    text-align: right;
+    width:170px;
+}
+.MasterCompetitiveProgramming_Right{
+    text-align: left;
+    width:170px;
+}
+.MasterCompetitiveProgramming_Para{
+    font-weight: lighter;
+    color: grey;
+}
+.MaterImage{
+    width: 30vw;
+    background-color: #588091;
+}
+.Master_Program{
+    padding: 20px;
+}
+.Main_Mater_Program{
+    display: flex;
+    flex-direction: column;
+    justify-content:center ;
+    align-items: center;
+}
+.MainCount{
+    display: flex;
+    gap: 140px;
+    border-top: 2px solid grey;
+    border-bottom: 2px solid grey;
+    padding: 30px;
+}
+.MainCount_Count{
+    font-weight: bolder;
+    font-size: 40px;
+    color: #00a6eb;
+}
+.MaterCodingImage{
+    width: 70vw;
+}
+.SelectBatch{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+    padding: 20px;
+    border-top: 2px solid gray;
+    border-bottom: 2px solid gray;
+}
+.Select_Batch_Second_Div{
+    display: flex;
+    gap:20px;
+    padding: 20px;
+}
+.Select_Batch_Second{
+    background-color: #00a6eb;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+.Select_Batch_Second_Button{
+    background-color: #00a6eb;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 15px;
+}
+.Span_Div{
+    font-size: 10px;
+}
+.Select_Batch_Div{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 15px;
+}
+
+
+@media all and (min-width: 320px) and (max-width: 760px){
+    .MCProgramMainDivFirst{
+        display: flex;
+        flex-direction: column;
+    }
+    .MCProgramHeadingImage{
+        height: 30vh;
+    }
+    .Founder{
+        display: flex;
+        flex-direction: column;
+    }
+    .MasterCompetitiveProgramming{
+        display: flex;
+        flex-direction: column;
+    }
+    .MasterCompetitiveProgramming_Left{
+        text-align: left;
+    }
+    .MainCount{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .MaterCodingImage{
+     display: none;
+    }
+    .SelectBatch{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .MasterCompetitiveProgramming_Para{
+        font-size: 15px;
+    }
+    .MasterCompetitiveProgramming_Right {
+        font-size: 30px;
+    }
+    .MasterCompetitiveProgramming_Left {
+        font-size: 30px;
+    }
+    .MCSUBdiv_SUB_{
+        flex-direction: column;
+    }
+    .MCSUBdiv_SUB_Div_Main{
+        width: 70vw;
+    }
+    .MaterImage{
+        width: 70vw;
+    }
+}
+
+
+@media all and (min-width: 761px) and (max-width: 960px){
+    .MCProgramMainDivFirst{
+        display: flex;
+        flex-direction: column;
+        /* width: 80vw; */
+    }
+    .MCProgramHeadingImage{
+        height: 20vh;
+    }
+    .Founder{
+        display: flex;
+        flex-direction: column;
+    }
+}
