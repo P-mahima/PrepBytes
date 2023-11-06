@@ -48,7 +48,7 @@ const Signup = () => {
 
 
   const RegisteringUser = async (clientData) => {
-    const url = "https://prepbyteserver.onrender.com/route/register";
+    const url = "https://prepbyteserver.onrender.com/user/register";
     const response = await axios.post(url, clientData);
     setresponseData(response.data);
 
