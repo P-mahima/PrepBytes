@@ -12,7 +12,7 @@ import Private from '../Registration/Private'
 import Signup from '../Registration/Signup'
 import Login from '../Registration/Login'
 import NextPage from '../../NextPage/NextPage'
-import MockTestNext from './Tabs/StudyMaterial/MockTestNext'
+// import MockTestNext from './Tabs/StudyMaterial/MockTestNext'
 
 
 const RouteCompo = () => {
@@ -31,8 +31,8 @@ const RouteCompo = () => {
           <Route path='/videotutorial' element={<VideoTutorials />} />
           <Route path='/register' element={<Signup/>} />
           <Route path='/login' element={<Login/>}/> 
-          <Route path='/NextPage/:id' element={<NextPage/>}  />
-          <Route path='/NextMockPage/:id' element={<MockTestNext/>}  />
+          <Route path='/dashboard' element={<NextPage/>}  />
+          {/* <Route path='/NextMockPage/:id' element={<MockTestNext/>}  /> */}
           
 
         </Routes>

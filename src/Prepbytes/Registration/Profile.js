@@ -31,7 +31,7 @@ const Profile = () => {
                 <div>
 
                 <div > 
-                <NavLink to='/NextPage/:id' className="registerlog">   Dashboard</NavLink>
+                <NavLink to='/dashboard' className="registerlog">   Dashboard</NavLink>
              </div>
                 
                 </div>

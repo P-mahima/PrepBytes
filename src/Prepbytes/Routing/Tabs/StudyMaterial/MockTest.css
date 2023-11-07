@@ -89,7 +89,9 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    background: transparent linear-gradient(180deg, #e0ebf9, #fff 54%, #fff) 0 0 no-repeat padding-box;
     gap: 10px;
+    padding: 20px;
     /* height: 20vh; */
 }
 
