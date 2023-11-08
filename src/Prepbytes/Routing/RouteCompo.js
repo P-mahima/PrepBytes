@@ -18,6 +18,7 @@ import Node from './Tabs/Project/Node'
 import ReactJS from './Tabs/Project/ReactJS'
 import JS from './Tabs/Project/JS'
 import CSS from './Tabs/Project/CSS'
+import PaymentRegister from './Tabs/Elevation/PaymentRegister'
 // import MockTestNext from './Tabs/StudyMaterial/MockTestNext'
 
 
@@ -45,6 +46,7 @@ const RouteCompo = () => {
           <Route path='/reactjs' element={<ReactJS/>} />
           <Route path='/nodejs' element={<Node/>} />
           <Route path='/mern' element={<MERN/>}/>
+          <Route path='/payment' element={<PaymentRegister/>}/>
 
 
 

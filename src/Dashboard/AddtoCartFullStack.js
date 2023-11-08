@@ -4,7 +4,7 @@ import { add } from "../ReDux/CartSlice";
 import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
 import { loadStripe } from '@stripe/stripe-js';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 const TestCardFullstack = (props) => {
@@ -109,6 +109,14 @@ const TestCardFullstack = (props) => {
               {/* <div className='Enroll_Now_Batch_Button_One'>Try for free</div> */}
             </div>
         <div className="TopicMockTestCard__bottom">
+
+
+        {/* {
+                        verified ?
+                            (<button className='PastMockTestCard__bottom--button' onClick={() => { makePayment(no, image, title); handleCart(no, image, title) }} >Test Now</button>)
+                            :
+                            (<Link to={"/login"} onClick={() => { window.scroll(0, 0) }}><button className='PastMockTestCard__bottom--button'>Test Now</button></Link>)
+                    } */}
 
           <button className='Enroll_Now_Batch_Button' onClick={() => { makePayment(no, image, title, price, ); handleCart(no, image, title,) }} >Enroll Now</button>
 

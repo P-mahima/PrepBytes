@@ -4,7 +4,7 @@ import { add } from "../ReDux/CartSlice";
 import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
 import { loadStripe } from '@stripe/stripe-js';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 const TestCardMaster = (props) => {
@@ -56,7 +56,7 @@ const TestCardMaster = (props) => {
           price: price,
           img: image,
           quantity: 1,
-          
+
         },
       ],
     };
@@ -82,7 +82,7 @@ const TestCardMaster = (props) => {
   };
 
   const token = localStorage.getItem('token');
-  const handleCart = (no, image, title, ) => {
+  const handleCart = (no, image, title,) => {
     if (token) {
       dispatch(
         add({
@@ -101,15 +101,22 @@ const TestCardMaster = (props) => {
   return (
     <div className='FeaturedPastContainer'>
       <div className="TopicMockTestCard" key={no}>
-   
-       
+
+
         <div className='Enroll_Fees'>₹ {price}</div>
-            <div className='Enroll_Now_Batch'>
-              {/* <div className='Enroll_Now_Batch_Button'>Enroll Now</div> */}
-              {/* <div className='Enroll_Now_Batch_Button_One'>Try for free</div> */}
-            </div>
+        <div className='Enroll_Now_Batch'>
+          {/* <div className='Enroll_Now_Batch_Button'>Enroll Now</div> */}
+          {/* <div className='Enroll_Now_Batch_Button_One'>Try for free</div> */}
+        </div>
         <div className="TopicMockTestCard__bottom">
 
+
+          {/* {
+            verified ?
+              (<button className='PastMockTestCard__bottom--button' onClick={() => { makePayment(no, image, title); handleCart(no, image, title) }} >Test Now</button>)
+              :
+              (<Link to={"/login"} onClick={() => { window.scroll(0, 0) }}><button className='PastMockTestCard__bottom--button'>Test Now</button></Link>)
+          } */}
           <button className='Enroll_Now_Batch_Button' onClick={() => { makePayment(no, image, title, price, ); handleCart(no, image, title,) }} >Enroll Now</button>
 
         </div>
