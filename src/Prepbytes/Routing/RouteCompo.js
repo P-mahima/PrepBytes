@@ -12,6 +12,12 @@ import Private from '../Registration/Private'
 import Signup from '../Registration/Signup'
 import Login from '../Registration/Login'
 import NextPage from '../../NextPage/NextPage'
+import HTML from './Tabs/Project/HTML'
+import MERN from './Tabs/Project/MERN'
+import Node from './Tabs/Project/Node'
+import ReactJS from './Tabs/Project/ReactJS'
+import JS from './Tabs/Project/JS'
+import CSS from './Tabs/Project/CSS'
 // import MockTestNext from './Tabs/StudyMaterial/MockTestNext'
 
 
@@ -26,13 +32,22 @@ const RouteCompo = () => {
           <Route path='/fullstackprogram' element={<FullStackProgram />} />
           <Route path='/mastercompetativeprogram' element={<MCProgram />} />
           <Route path='/elevationacademy' element={<ElevationA />} />
-          <Route path='/projects' element={<Projects />} />
+          
           <Route path='/mocktest' element={<MockTest />} />
           <Route path='/videotutorial' element={<VideoTutorials />} />
           <Route path='/register' element={<Signup/>} />
           <Route path='/login' element={<Login/>}/> 
           <Route path='/dashboard' element={<NextPage/>}  />
           {/* <Route path='/NextMockPage/:id' element={<MockTestNext/>}  /> */}
+          <Route path='/html' element={<HTML/>} />
+          <Route path='/css' element={<CSS/>} />
+          <Route path='/js' element={<JS/>} />
+          <Route path='/reactjs' element={<ReactJS/>} />
+          <Route path='/nodejs' element={<Node/>} />
+          <Route path='/mern' element={<MERN/>}/>
+
+
+
           
 
         </Routes>

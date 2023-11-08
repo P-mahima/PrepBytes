@@ -1,8 +1,24 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Layout from '../../../Layout'
 import './MCProgram.css'
+import TestCardMaster from '../../../../Dashboard/AddtocartMaster'
+import axios from 'axios'
 
 const MCProgram = () => {
+  const [mockData, SetMockData] = useState([])
+
+  // url = 
+  useEffect(() => {
+      axios.get('https://prepbyteclone-server.onrender.com/user/master')
+          .then((response) => {
+              // console.log(response);
+              SetMockData(response.data)
+              // setLoading(false);
+          })
+          .catch((err) => {
+              console.log(err);
+          })
+  }, [])
   return (
     <Layout>
       <div className='Main_Mater_Program'>
@@ -265,8 +281,19 @@ const MCProgram = () => {
           <div className='Select_Batch_Second'>15th December <br></br> <span className='Span_Div'>Enrolment start</span></div>
         </div>
 
+
         <div>
-        ₹25000 <br></br> <br></br> <span className='Select_Batch_Second_Button'>Enroll Now</span>
+
+        {mockData.map((item, ind) => (
+                  <TestCardMaster
+                  
+                   no={item.no} 
+                  image={item.image}
+                  title={item.title}
+                  price={item.price}
+                  />
+                ))}
+        {/* ₹25000 <br></br> <br></br> <span className='Select_Batch_Second_Button'>Enroll Now</span> */}
         </div>
       </div>
 

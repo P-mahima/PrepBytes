@@ -1,9 +1,28 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Layout from '../../../Layout'
 import './FullStack.css'
 import Img from './Images/Feature.webp'
+import axios from 'axios'
+import TestCardFullstack from '../../../../Dashboard/AddtoCartFullStack'
 
 const FullStackProgram = () => {
+
+  const [mockData, SetMockData] = useState([])
+
+  // url = 
+  useEffect(() => {
+      axios.get('https://prepbyteclone-server.onrender.com/user/fullstack')
+          .then((response) => {
+              // console.log(response);
+              SetMockData(response.data)
+              // setLoading(false);
+          })
+          .catch((err) => {
+              console.log(err);
+          })
+  }, [])
+
+  console.log(mockData)
   return (
     <Layout>
       <div>
@@ -46,14 +65,22 @@ const FullStackProgram = () => {
             <span className='EnrollmentSpan'> Enrolment Started</span> </label>
             </div>
           </div>
-
-          <div>
+          {mockData.map((item, ind) => (
+                  <TestCardFullstack
+                  
+                   no={item.no} 
+                  image={item.image}
+                  title={item.title}
+                  price={item.price}
+                  />
+                ))}
+          {/* <div>
             <div className='Enroll_Fees'>₹ 30000</div>
             <div className='Enroll_Now_Batch'>
               <div className='Enroll_Now_Batch_Button'>Enroll Now</div>
               <div className='Enroll_Now_Batch_Button_One'>Try for free</div>
             </div>
-          </div>
+          </div> */}
         {/* <hr></hr> */}
         </div>
 

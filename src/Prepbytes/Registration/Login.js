@@ -24,7 +24,7 @@ const Login = () => {
   };
 
   const loginUser = async (userData) => {
-    const api = "https://prepbyteserver.onrender.com/user/login";
+    const api = "https://prepbyteclone-server.onrender.com/user/login";
     const response = await axios.post(api, userData);
     setResponseData(response.data);
 

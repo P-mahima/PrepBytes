@@ -34,9 +34,9 @@ const ElevationA = () => {
 
       </div>
 
-      <div>
+      {/* <div>
         <img className='Elevation_First_Div_Second_Image' src={image} alt=''></img>
-      </div>
+      </div> */}
 
       </div>
 

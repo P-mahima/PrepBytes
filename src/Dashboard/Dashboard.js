@@ -94,25 +94,25 @@ const Cart = () => {
                         {/* Aptitude Placement 2022 - Mock test 3 */}
                         {cartItem.title}
                       </p>
-                      <div className="FuturedCard-MiddlePart">
-                        <div className="MiddlePart-left">
+                      {/* <div className="FuturedCard-MiddlePart"> */}
+                        {/* <div className="MiddlePart-left">
                           <p className="leftPart-top">{cartItem.date}</p>
                           <p className="leftPart-bottom">{cartItem.date1}</p>
-                        </div>
-                        <hr className="amHR" />
-                        <div className="MiddlePart-Center">
-                          <p className="midPart-top">{cartItem.pip}</p>
+                        </div> */}
+                        {/* <hr className="amHR" /> */}
+                        {/* <div className="MiddlePart-Center">
+                         
                           <p className="midPart-bottom">{cartItem.part}</p>
-                        </div>
-                        <hr className="amHR" />
-                        <div className="RightPart-right">
+                        </div> */}
+                        {/* <hr className="amHR" /> */}
+                        {/* <div className="RightPart-right">
                           <p className="leftPart-top">{cartItem.time}</p>
                           <p className="leftPart-bottom">{cartItem.due}</p>
                         </div>
-                      </div>
-                      <div className="MockTestCard__bottom">
+                      </div> */}
+                      {/* <div className="MockTestCard__bottom">
                     <button className="bottom--button">Test Now</button>
-                  </div>
+                  </div> */}
                     </div>
                   );
                 })}

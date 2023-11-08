@@ -92,6 +92,7 @@
     background: transparent linear-gradient(180deg, #e0ebf9, #fff 54%, #fff) 0 0 no-repeat padding-box;
     gap: 10px;
     padding: 20px;
+ 
     /* height: 20vh; */
 }
 
@@ -104,6 +105,7 @@
     box-shadow: 0 10px 30px rgba(95, 141, 196, .2);
     border-radius: 5px;
     color: #707070;
+    border: 2px solid rgb(187, 224, 234);
     margin: 0 auto 30px;
 }
 
@@ -230,6 +232,11 @@
     background-color: #707070;
     position: relative;
     top: 10px;
+}
+.TopicMockTestCard__bottom--button{
+    background-color: aquamarine;
+    border: 2px solid aquamarine;
+    border-radius: 2px;
 }
 
 

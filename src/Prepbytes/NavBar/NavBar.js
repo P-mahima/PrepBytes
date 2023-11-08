@@ -110,17 +110,102 @@ function NavBar() {
               </NavLink>
             </div>
 
-            <div className="navCart">
-              <NavLink
-                exact
-                to="/projects"
-                activeClassName="active"
-                className="nav-links"
-                onClick={handleClick}
-              >
-                Projects
-              </NavLink>
+            <div className="dropdown">
+              <label className="nav-item ">Projects</label>
+              <div className="dropdown-content">
+
+                <div className="nav-item">
+                  <NavLink
+                    exact
+                    to="/html"
+                    activeClassName="active"
+                    className="nav-links"
+                    onClick={handleClick}
+                  >
+                  HTML
+                  </NavLink>
+                </div>
+
+
+                <div className="nav-item">
+                  <NavLink
+                    exact
+                    to="/css"
+                    activeClassName="active"
+                    className="nav-links"
+                    onClick={handleClick}
+                  >
+                    CSS
+                  </NavLink>
+                </div>
+
+                <div className="nav-item">
+                  <NavLink
+                    exact
+                    to="/js"
+                    activeClassName="active"
+                    className="nav-links"
+                    onClick={handleClick}
+                  >
+                    JAVASCRIPT
+                  </NavLink>
+                </div>
+
+                <div className="nav-item">
+                  <NavLink
+                    exact
+                    to="/reactjs"
+                    activeClassName="active"
+                    className="nav-links"
+                    onClick={handleClick}
+                  >
+                  REACTJS
+                  </NavLink>
+                </div>
+
+                <div className="nav-item">
+                  <NavLink
+                    exact
+                    to="/nodejs"
+                    activeClassName="active"
+                    className="nav-links"
+                    onClick={handleClick}
+                  >
+                   NODEJS
+                  </NavLink>
+                </div>
+                <div className="nav-item">
+                  <NavLink
+                    exact
+                    to="/mern"
+                    activeClassName="active"
+                    className="nav-links"
+                    onClick={handleClick}
+                  >
+                   MERN
+                  </NavLink>
+                </div>
+
+
+
+
+
+
+
+              </div>
             </div>
+
+
+
+
+
+
+
+
+
+
+
+
 
             <div>
             <Profile/>
