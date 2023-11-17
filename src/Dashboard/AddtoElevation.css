@@ -1,0 +1,20 @@
+.maindashboradBox{
+  
+    height: 35vh;
+    width: 20vw;
+    background-color: rgb(198, 198, 235);
+    background-repeat: repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.bashbosrdImage{
+    height: 10vh;
+    width: 10vw;
+}
+.flexdashboard{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}

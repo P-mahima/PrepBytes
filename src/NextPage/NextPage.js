@@ -1,8 +1,7 @@
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
-// import Navbar from "../Navbar";
+import { useSelector } from "react-redux";
+
 import "./NextPage.css";
-import Layout from "../Prepbytes/Layout";
 // import { Link } from "react-router-dom";
 
 const Cart = () => {
@@ -13,10 +12,8 @@ const Cart = () => {
   const productCount = cart.cartItems.length;
 
   return (
-    <Layout>
-
-    <div>
-      {/* <Navbar /> */}
+    <>
+      
       <section className="CartPage">
         <div className="CartLeft">
           <div className="CartBox">
@@ -58,7 +55,9 @@ const Cart = () => {
           {productCount === 0 ? (
             <div>
               <div className="Program">
-                <h2>Courses <span>{cartCount}</span></h2>
+                <h2>
+                  Courses <span>{cartCount}</span>
+                </h2>
                 <h2>Track/Program(0)</h2>
               </div>
               <div>
@@ -68,8 +67,8 @@ const Cart = () => {
           ) : (
             <div>
               <div className="Program">
-                <h2>Courses</h2>
-                <h2>Track/Program</h2>
+                <h2>Courses(0)</h2>
+                <h2>Track/Program(0)</h2>
               </div>
               <div className="CartItem">
                 {cart.cartItems?.map((cartItem) => {
@@ -99,7 +98,7 @@ const Cart = () => {
                           <p className="leftPart-top">{cartItem.date}</p>
                           <p className="leftPart-bottom">{cartItem.date1}</p>
                         </div>
-                        <hr className="amHR" />
+                        {/* <hr className="amHR" />
                         <div className="MiddlePart-Center">
                           <p className="midPart-top">{cartItem.pip}</p>
                           <p className="midPart-bottom">{cartItem.part}</p>
@@ -108,11 +107,8 @@ const Cart = () => {
                         <div className="RightPart-right">
                           <p className="leftPart-top">{cartItem.time}</p>
                           <p className="leftPart-bottom">{cartItem.due}</p>
-                        </div>
+                        </div> */}
                       </div>
-                      <div className="MockTestCard__bottom">
-                    <button className="bottom--button">Test Now</button>
-                  </div>
                     </div>
                   );
                 })}
@@ -121,10 +117,8 @@ const Cart = () => {
           )}
         </div>
       </section>
-    </div>
-    </Layout>
-
+    </>
   );
 };
 
-export default Cart;
+export default Cart;

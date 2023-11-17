@@ -9,7 +9,7 @@ const PaymentRegister = () => {
 
   // url = 
   useEffect(() => {
-      axios.get('https://prepbyteclone-server.onrender.com/user/elevation')
+      axios.get('https://prepbyteclone.onrender.com/user/elevation')
           .then((response) => {
               // console.log(response);
               SetMockData(response.data)

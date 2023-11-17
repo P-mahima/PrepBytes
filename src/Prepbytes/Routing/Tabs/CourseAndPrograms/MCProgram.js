@@ -9,7 +9,7 @@ const MCProgram = () => {
 
   // url = 
   useEffect(() => {
-      axios.get('https://prepbyteclone-server.onrender.com/user/master')
+      axios.get('https://prepbyteclone.onrender.com/user/master')
           .then((response) => {
               // console.log(response);
               SetMockData(response.data)

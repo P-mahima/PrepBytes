@@ -19,7 +19,7 @@ function MockTest() {
 
   // url = 
   useEffect(() => {
-      axios.get('https://prepbyteclone-server.onrender.com/user/data')
+      axios.get('https://prepbyteclone.onrender.com/user/data')
           .then((response) => {
               // console.log(response);
               SetMockData(response.data)

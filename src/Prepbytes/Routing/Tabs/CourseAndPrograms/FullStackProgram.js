@@ -11,7 +11,7 @@ const FullStackProgram = () => {
 
   // url = 
   useEffect(() => {
-      axios.get('https://prepbyteclone-server.onrender.com/user/fullstack')
+      axios.get('https://prepbyteclone.onrender.com/user/fullstack')
           .then((response) => {
               // console.log(response);
               SetMockData(response.data)

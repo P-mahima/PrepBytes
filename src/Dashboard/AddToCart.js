@@ -1,43 +1,18 @@
-// import React from "react";
-// import { useDispatch } from "react-redux";
-// import { add } from "../ReDux/CartSlice";
-
-
-// const AddToCart = ({ item }) => {
-//   const dispatch = useDispatch();
-//   const token = localStorage.getItem("token");
-
-//   const handleCart = (item) => {
-//     if (token) {
-//       dispatch(add(item));
-//     } else {
-//       window.alert("Please login first");
-//     }
-//   };
-//   return (
-//     <div>
-//       <div className="MockTestCard__bottom">
-//         <button className="bottom--button" onClick={()=> handleCart(item)}>Test Now</button>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default AddToCart;
 
 
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react'
-// import "./AddtoCart.css"
+// import ".././"
 import { add } from "../ReDux/CartSlice";
 import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
 import { loadStripe } from '@stripe/stripe-js';
 import { Link } from 'react-router-dom';
+import './Demo.css'
 
 
 const TestCard2 = (props) => {
-  const { no, image, title, price, pip, date, date1, part, time, due } = props
+  const { no, image, title, price, } = props
 
 
 
@@ -50,29 +25,34 @@ const TestCard2 = (props) => {
   const dispatch = useDispatch();
   const select = useSelector((state) => state.cart.data)
 
+
+  // const { no, title, pip, part, due, time, date, date1, image } = item;
+  // const dispatch = useDispatch();
+  const token = localStorage.getItem("token");
   // console.log(select);
 
   // Token Verification for the user is valid or not
-  useEffect(() => {
-    const token = localStorage.getItem('token');
-    // console.log("This is Token ",token)
+  // useEffect(() => {
+   
+  
+  //   const token = localStorage.getItem('token');
+ 
+  //   axios.get('https://prepbyteclone-server.onrender.com/dashboard', {
+  //     headers: {
+  //       Authorization: `Bearer ${token}`
+  //     },
+  //   })
+  //     .then((response) => {
+  //       console.log(response.data);
+  //       setVerified(true);
+  //     })
+  //     .catch((err) => {
+  //       console.log("error is authorization : " + err)
+  //     });
+  // }, [])
 
-    axios.get('https://prepbyteclone-server.onrender.com/dashboard', {
-      headers: {
-        Authorization: `Bearer ${token}`
-      },
-    })
-      .then((response) => {
-        console.log(response.data);
-        setVerified(true);
-      })
-      .catch((err) => {
-        console.log("error is authorization : " + err)
-      });
-  }, [])
 
-
-  const makePayment = async (no, image, title, price, pip, date, date1, part, time, due) => {
+  const makePayment = async (no, image, title, price,) => {
     const stripe = await loadStripe(
       "pk_test_51O9j0iSBNg9h8aKNCfdZO8ihhHuvF7ZcePQHioZy6ve6hIIeMLQeogKF6YVgLy6FXSgf2N5Hn3NWXUpWhX4aDEJ700EvP7zW1g"
     )
@@ -85,7 +65,7 @@ const TestCard2 = (props) => {
           price: price,
           img: image,
           quantity: 1,
-          pip: pip, date: date, date1: date1, part: part, time: time, due: due
+          
         },
       ],
     };
@@ -94,7 +74,7 @@ const TestCard2 = (props) => {
     };
 
     const response = await fetch(
-      "https://prepbyteclone-server.onrender.com/api/create-checkout-session",
+      "https://prepbyteclone.onrender.com/api/create-checkout-session",
       {
         method: "POST",
         headers: headers,
@@ -110,15 +90,14 @@ const TestCard2 = (props) => {
     }
   };
 
-  const token = localStorage.getItem('token');
-  const handleCart = (no, image, title, pip, date, date1, part, time, due) => {
+  // const token = localStorage.getItem('token');
+  const handleCart = (no, image, title, ) => {
     if (token) {
       dispatch(
         add({
           no: no,
           title: title,
-          image: image, pip: pip, date: date, date1: date1, part: part, time: time, due: due
-
+          image: image,
         })
       );
     } else {
@@ -131,7 +110,7 @@ const TestCard2 = (props) => {
     <div className='MockCard '>
       <div className="MockCard-top">
         <img
-          src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNi42MDEiIGhlaWdodD0iMjYuNjAxIiB2aWV3Qm94PSIwIDAgMjYuNjAxIDI2LjYwMSI+PGRlZnM+PHN0eWxlPi5he2ZpbGw6IzM5NjlhZDtzdHJva2U6IzM5NjlhZDt9PC9zdHlsZT48L2RlZnM+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMC41IDAuNSkiPjxjaXJjbGUgY2xhc3M9ImEiIGN4PSIwLjUiIGN5PSIwLjUiIHI9IjAuNSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTIgNikiLz48cGF0aCBjbGFzcz0iYSIgZD0iTTIxLjg1MiwzLjc0OWExMi44LDEyLjgsMCwwLDAtMTguMSwxOC4xLDEyLjgwNSwxMi44MDUsMCwwLDAsMTUuNjc1LDEuOSwxLDEsMCwwLDAtMS4wMzYtMS43MTEsMTAuOSwxMC45LDAsMSwxLDMuMzgyLTMuMjUxLDEsMSwwLDAsMCwxLjY2MywxLjExMiwxMi43NjksMTIuNzY5LDAsMCwwLTEuNTgtMTYuMTU3WiIvPjxwYXRoIGNsYXNzPSJhIiBkPSJNMjM3LDE4N2ExLDEsMCwwLDAtMSwxdjguOWExLDEsMCwwLDAsMiwwVjE4OEExLDEsMCwwLDAsMjM3LDE4N1oiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yMjQuMiAtMTc3LjY1KSIvPjwvZz48L3N2Zz4="
+          src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNi42MDEiIGhlaWdodD0iMjYuNjAxIiB2aWV3Qm94PSIwIDAgMjYuNjAxIDI2LjYwMSI+PGRlZnM+PHN0eWxlPi5he2ZpbGw6IzM5NjlhZDtzdHJva2U6IzM5NjlhZDt9PC9zdHlsZT48L2RlZnM+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMC41IDAuNSkiPjxjaXJjbGUgY2xhc3M9ImEiIGN4PSIwLjUiIGN5PSIwLjUiIHI9IjAuNSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTIgNikiLz48cGF0aCBjbGFzcz0iYSIgZD0iTTIxLjg1MiwzLjc0OWExMi44LDEyLjgsMCwwLDAtMTguMSwxOC4xLDEyLjgwNSwxMi44MDUsMCwwLDAsMTUuNjc1LDEuOSwxLDEsMCwwLDAtMS4wMzYtMS43MTEsMTAuOSwxMC45LDAsMSwxLDMuMzgyLTMuMjUxLDEsMSwwLDAsMCwxLjY2MywxLjExMiwxMi43NjksMTIuNzY5LDAsMCwwLTEuNTgtMTYuMTU3WiIvPjxwYXRoIGNsYXNzPSJhIiBkPSJNMjM3LDE4N2ExLDEsMCwwLDAtMSwxdjguOWExLDEsMCwwLDAsMiwwVjE4OEExLDEsMCwwLDAsMjM3LDE4N1oiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yMjQuMiAtMTc3LjY1KSIvPjwvZz48L3N2Zz4='
           alt="/"
         />
         <div className="MockCard-share">
@@ -143,7 +122,7 @@ const TestCard2 = (props) => {
       </div>
       <div className="TopicMockTestCard" key={no}>
         <div className="CardIm">
-          <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-dZzZR7wSWylEt6U72silhTaDBLOT9JDgfA&usqp=CAU' alt="/" />
+          <img src={image} alt="/" />
         </div>
         <p className="FutureCard-Heading1">{title}</p>
         {/* <div className="FuturedCard-MiddlePart">
@@ -165,16 +144,11 @@ const TestCard2 = (props) => {
 
         <div className="TopicMockTestCard__bottom">
 
-          {/* {
-            verified ?
-              (<button className='PastMockTestCard__bottom--button' onClick={() => { makePayment(no, image, title, pip, date, date1, part, time, due); handleCart(no, image, title, pip, date, date1, part, time, due) }} >Test Now</button>)
-              :
-              (<Link to={"/login"} onClick={() => { window.scroll(0, 0) }}><button className='PastMockTestCard__bottom--button'>Test Now</button></Link>)
-          } */}
+        
 
 
 
-          <button className='TopicMockTestCard__bottom--button' onClick={() => { makePayment(no, image, title, price, pip, date, date1, part, time, due); handleCart(no, image, title, pip, date, date1, part, time, due) }} >Test Now</button>
+          <button className='TopicMockTestCard__bottom--button' onClick={() => { makePayment(no, image, title, price,); handleCart(no, image, title, ) }} >Test Now</button>
 
         </div>
       </div>

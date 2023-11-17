@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-// import "./AddtoCart.css"
+import "./Demo.css"
 import { add } from "../ReDux/CartSlice";
 import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
@@ -24,23 +24,22 @@ const TestCardFullstack = (props) => {
   // console.log(select);
 
   // Token Verification for the user is valid or not
-  useEffect(() => {
-    const token = localStorage.getItem('token');
-    // console.log("This is Token ",token)
-
-    axios.get('https://prepbyteclone-server.onrender.com/dashboard', {
-      headers: {
-        Authorization: `Bearer ${token}`
-      },
-    })
-      .then((response) => {
-        console.log(response.data);
-        setVerified(true);
-      })
-      .catch((err) => {
-        console.log("error is authorization : " + err)
-      });
-  }, [])
+  // useEffect(() => {
+  //   const token = localStorage.getItem('token');
+    
+  //   axios.get('https://prepbyteclone-server.onrender.com/dashboard', {
+  //     headers: {
+  //       Authorization: `Bearer ${token}`
+  //     },
+  //   })
+  //     .then((response) => {
+  //       console.log(response.data);
+  //       setVerified(true);
+  //     })
+  //     .catch((err) => {
+  //       console.log("error is authorization : " + err)
+  //     });
+  // }, [])
 
 
   const makePayment = async (no, image, title, price) => {
@@ -65,7 +64,7 @@ const TestCardFullstack = (props) => {
     };
 
     const response = await fetch(
-      "https://prepbyteclone-server.onrender.com/api/create-checkout-session",
+      "https://prepbyteclone.onrender.com/api/create-checkout-session",
       {
         method: "POST",
         headers: headers,
