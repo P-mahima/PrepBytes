@@ -1265,6 +1265,7 @@ h2 {
         display: flex;
         flex-direction: column;
         gap: 20px;
+        height: 110vh;
     }
 
     .FullStack_Seconf_subDiv {
@@ -1338,8 +1339,7 @@ h2 {
     }
 
     .Fullstack_Second_Div {
-        position: relative;
-        top: 160px;
+        display: none;
     }
 
     .Elevation_First_para {
@@ -1371,6 +1371,9 @@ h2 {
     .Ele-right span {
         width: 60vw;
     }
+    .Finish_program_SeconD_imgHead {
+        display: none;
+    }
 }
 
 
@@ -1401,7 +1404,8 @@ h2 {
         justify-content: center;
         width: 85vw;
         position: relative;
-        top: 250px;
+        top: 400px;
+        left: 120px;
     }
     .FullStack_Seconf_subDiv{
         width: 50vw;
@@ -1427,6 +1431,9 @@ h2 {
     .ImageDiv{
         position: relative;
         top: 400px;
+    }
+    .FullStack_Seconf_subDiv {
+        background-color:#00a5ec;
     }
 }
 
@@ -1890,6 +1897,15 @@ h2 {
     .FounderDiv{
         display: flex;
         justify-content: space-around;
+    }
+    .MaterImage{
+        height: 45vh;
+    }
+    .FullStack_Seconf_subDiv_sub{
+        color: white;
+    }
+    .Languages_FullStack_Image{
+        width: 80vw;
     }
 }
 
