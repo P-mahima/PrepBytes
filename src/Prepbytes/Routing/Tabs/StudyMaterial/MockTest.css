@@ -1012,7 +1012,7 @@ h2 {
 
     .Live_Learning {
         width: 40vw;
-        height: 36vh;
+        height: 20vh;
     }
 
     .videoHeadContainer {
@@ -1402,10 +1402,11 @@ h2 {
     }
     .Fullstack_Second_Div{
         justify-content: center;
+        align-items: center;
         width: 85vw;
         position: relative;
         top: 400px;
-        left: 120px;
+        /* left: 120px; */
     }
     .FullStack_Seconf_subDiv{
         width: 50vw;
