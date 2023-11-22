@@ -1131,12 +1131,7 @@ h2 {
     justify-content: center; */
 }
 
-.EnrolmentStarted input {
-    position: relative;
-    top: 23px;
-    right: 92px;
-    /* height: 10px; */
-}
+
 
 .EnrolmentStarted:hover {
     border: 2px solid black;

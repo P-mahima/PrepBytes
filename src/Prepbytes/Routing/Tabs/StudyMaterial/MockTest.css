@@ -1133,12 +1133,12 @@ h2 {
     justify-content: center; */
 }
 
-.EnrolmentStarted input {
+/* .EnrolmentStarted input {
     position: relative;
     top: 23px;
     right: 92px;
-    /* height: 10px; */
-}
+  
+} */
 
 .EnrolmentStarted:hover {
     border: 2px solid black;
@@ -1429,11 +1429,13 @@ h2 {
         top: 400px;
     }
     .ImageDiv{
-        position: relative;
-        top: 400px;
+        display: none;
     }
     .FullStack_Seconf_subDiv {
         background-color:#00a5ec;
+    }
+    .Finish_Program{
+        padding-bottom: 350px;
     }
 }
 
